@@ -1,216 +1,523 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Portfolio - by saugat</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>Saugat Tripathi</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<!-- Add Font Awesome CDN link -->
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f6f6f6;
+			transition: margin-left .3s;
+			/* Add transition for smooth slide animation */
+			margin-left: 50px;
+			/* Add margin-left property */
+			text-align: justify;
+		}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by saugat</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+		header {
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Resume</a></li>
-							<li><a href="generic.html">Projects</a></li>
-							<li><a href="PosterSTLE.pdf">Elemental</a></li>
-							</ul></div>
-							</li> </ul>
-						</ul>
-						<ul class="actions stacked">			
-							<li><div class="inner"><ul class="icons">
-								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
-								<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-								<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
-								<a href="https://github.com/saugat76" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a>
-								<a href="https://www.linkedin.com/in/saugat-tripathi/" class="icon brands alt fa-linkedin-in" target = "_blank"><span class="label">LinkedIn</span></a>
-							</ul></div>
-							</li>
-						</ul>
-					</nav>
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Saugat Tripathi</h1>
-							</header>
-							<div class="content">
-								<p>Electronics and Communication Engineer<br />
-								Specializing in Software and Data Engineering</p>
-								
-							</div>
-						</div>
-					</section>
+		.sidenav {
+			background-color: rgb(215, 215, 215);
+			/* Increase transparency by adding alpha value */
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			overflow-x: hidden;
+			transition: width .3s;
+			/* Add transition for smooth slide animation */
+			padding-top: 60px;
+			font-family: Arial, sanss-serif;
+			/* Add font-family property */
+		}
 
-				<!-- Main -->
-					<div id="main">
+		.sidenav a {
+			padding: 8px 8px 24px 32px;
+			text-decoration: none;
+			font-size: 20px;
+			color: #000000;
+			display: block;
+			transition: color .3s;
+		}
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Resume</a></h3>
-										<p>Portfolio of work, education, and experience</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="generic.html" class="link">Projects</a></h3>
-										<p>Electronics and Software Projects</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="elements.html" class="link">Elementals</a></h3>
-										<p>Only Enter for Suprises</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="" class="link">Experiences</a></h3>
-										<p>Line of Work, I have done</p>
-									</header>
-								</article>
-								<!-- <article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Consequat</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article> -->
-								<!-- <article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Etiam</a></h3>
-										<p>Feugiat amet tempus</p>
-									</header>
-								</article> -->
-							</section>
+		.sidenav a:hover {
+			color: #f1f1f1;
+		}
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Saugat</h2>
-									</header>
-									<p>I am Electronics and Communication Engineer. I graduated from Thapathali Campus(I.O.E), Tribhuwan University in 2020. I am enthusiatic and keen on learning new things and processes and implement them in action. My areas of interest includes data sciences, machine learning, bio-medical research and electronics.</p>
-									<ul class="actions">
-										<li><a href="landing.html" class="button next">Resume</a></li>
-									</ul>
-								</div>
-							</section>
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
 
-					</div>
+		.dark-mode {
+			background-color: black;
+			color: white;
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="formmessage.php">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="mailto: tha072bex337@tcioe.edu.np">tha072bex337@tcioe.edu.np</a>
-									</div>
-								</section>
-								<!-- <section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
- -->								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Kalanki<br />
-										Kathmandu, Bagmati Province<br />
-										44600, Nepal</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+			.sidenav a {
+				color: white;
+				background-color: #1c1b1b;
+				/* Add this rule to change the text color of the links inside the navbar when dark mode is active */
+			}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
-								<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-								<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
-								<li><a href="https://github.com/saugat76" class="icon brands alt fa-github" target="_none"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/saugat-tripathi/" class="icon brands alt fa-linkedin-in" target = "_none"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Saugat Tripathi</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+			.sidenav {
+				background-color: #1c1b1b;
+				/* Add this rule to change the background color of the side navigation when dark mode is active */
+			}
+
+			.sidenav a:hover {
+				background-color: #1c1b1b;
+				color: #626060;
+			}
+
+			.text-box {
+				background-color: #1c1b1b;
+				color: white;
+			}
+
+			.timeline:before {
+				background-color: white;
+			}
+
+			.timeline h3:before {
+				background-color: white;
+			}
+		}
+
+		#main {
+			transition: margin-left .3s, width .3s;
+			/* Add transition for smooth slide animation */
+			padding: 20px;
+			margin-left: 0;
+			/* Add margin-left property */
+		}
+
+		section {
+			padding: 20px;
+		}
+
+		form input[type="text"],
+		form input[type="email"] {
+			margin: 10px 0;
+			padding: 10px;
+			width: 100%;
+		}
+
+		form input[type="submit"] {
+			padding: 10px 20px;
+			background-color: #333;
+			color: white;
+			border: none;
+		}
+
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 60px;
+			height: 34px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 1px;
+			right: 1px;
+			bottom: 2px;
+			background-color: #1a1a1a;
+			transition: .4s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 24px;
+			width: 24px;
+			left: 4px;
+			bottom: 4px;
+			background-color: rgb(183, 183, 183);
+			transition: .4s;
+		}
+
+		input:checked+.slider {
+			background-color: #a1a1a1;
+		}
+
+		input:checked+.slider:before {
+			transform: translateX(26px);
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
+		}
+
+		.slider i {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.slider .fa-moon {
+			left: 7px;
+		}
+
+		.slider .fa-sun {
+			right: 7px;
+		}
+
+		.text-box {
+			background-color: rgb(215, 215, 215);
+			color: black;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 0 auto;
+			/* Added to center the text box */
+			max-width: 800px;
+			/* Added to limit the width of the text box */
+		}
+
+		.text-box section {
+			margin-bottom: 20px;
+		}
+
+		.text-box i {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+
+		.text-box h3 {
+			font-size: 16px;
+			margin: 0;
+			padding-left: 10px;
+		}
+
+		.text-box p {
+			margin: 0;
+			font-size: 16px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			text-align: justify;
+
+		}
+
+		.text-box ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 16px;
+		}
+
+		.text-box li {
+			margin-bottom: 10px;
+			font-size: 16px;
+			padding-left: 10px;
+			list-style-type: '- ';
+		}
+
+		.text-box span {
+			font-size: 12px;
+			padding-left: 10px;
+		}
+
+		.timeline {
+			position: relative;
+			margin-left: 60px;
+			margin-bottom: 20px;
+		}
+
+		.timeline:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -15px;
+			width: 3px;
+			height: 100%;
+			background-color: #333;
+		}
+
+		.timeline h3 {
+			position: relative;
+			font-size: 16px;
+		}
+
+		.timeline h3:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -10px;
+			transform: translateY(-50%);
+			width: 0;
+			height: 0;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 5px solid #333;
+			/* Use a border to create an arrow */
+		}
+
+
+
+		/* Media Queries */
+		@media screen and (max-width: 600px) {
+			.sidenav {
+				width: 100%;
+			}
+
+			#main {
+				margin-left: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="container" style="display: flex; justify-content: flex-end;">
+			<label class="switch">
+				<input type="checkbox" id="mode" class="toggle" onclick="toggleTheme()">
+				<span class="slider round">
+					<i class="fas fa-moon"></i>
+					<i class="fas fa-sun"></i>
+				</span>
+			</label>
+			<p id="theme"></p>
+		</div>
+	</header>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#education" onclick="scrollToSection('education')"><i class="fas fa-graduation-cap"></i> Education</a>
+		<a href="#experience" onclick="scrollToSection('experience')"><i class="fas fa-briefcase"></i> Experience</a>
+		<a href="#projects" onclick="scrollToSection('projects')"><i class="fas fa-code"></i> Projects</a>
+		<a href="#skills" onclick="scrollToSection('skills')"><i class="fa-solid fa-book"></i> Skills</a>
+		<a href="#certifications" onclick="scrollToSection('certifications')"><i class="fas fa-certificate"></i>Certifications</a>
+		<a href="#awardandrecognization" onclick="scrollToSection('awardandrecognization')"><i
+				class="fas fa-trophy"></i> Award and Recognization</a>
+		<a href="blog.html" onclick="scrollToSection('blog')"><i class="fas fa-blog"></i> Blog</a>
+			
+			<hr> 
+	<div class="social-links flex-container">
+		<a href="https://github.com/saugat76" target="_blank"><i class="fab fa-github"></i></a>
+		<a href="https://www.linkedin.com/in/saugat-tripathi/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+		<a href="resume.pdf" target="_blank"><i class="fas fa-file"></i></a> 
+	</div>
+			
+	</div>
+
+	<script>
+		window.addEventListener('load', function () {
+			openNav();
+			toggleTheme();
+		});
+	</script>
+	<main id="main">
+		<span onclick="openNav()">&#9776; </span>
+
+		<section id="aboutme">
+			<h1> <i class="fa fa-user"></i>&nbsp; Hi there!</h1>
+			<div class="flex-container" style="display: flex; flex-direction: row;">
+				<div class="text-box" style="width: fit-content; margin-top: auto; margin-bottom: auto;">
+					<p> I am Saugat 👋. I am a Wireless Engineer who loves developing and researching new wireless
+						technologies💡. I do development of newer power efficient wireless protocol. Have you ever heard
+						of Bluetooth Low
+						Energy (BLE)? 📡 Yeah, I am working on the same but to modify the protocol to make it more power
+						efficient than BLE. 🚀 How is that even possible? Adding time division multiplexing on top of
+						frequency division
+						multiplexing 🎛️. I also have been involved in a lot of Deep Reinforcement Learning
+						communication system particularly using Unmanned Aerial Vehicles (Drone). How cool is that?
+						Right? 😎 I still do a lot of wireless
+						research and projects in any free time I get ⏰. </p>
+				</div>
+				<div class="image-box" style="margin-left: 50px;">
+					<img src="profile_pic.JPG" alt="profilepic"
+						style="max-width: 350px; height: 350px; border-radius: 50%;">
+				</div>
 
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<section id="experience">
+			<h1> <i class="fas fa-briefcase"></i>&nbsp;Experience</h1>
+			<div class="text-box">
+				<div class="timeline">
+					<span>July 2023 - Present</span>
+					<h3><a href="https://passivelogic.com/" target="_blank"
+							style="text-decoration: none; color: inherit;">PassiveLogic</a>, Salt Lake City, UT</h3>
+					<p>BLE Wireless Engineer</p>
+					<p>
+					<ul>
+						<li>Spearheaded development of a proprietary wireless mesh protocol on top of Bluetooth mesh
+							leveraging synchronized nodes using time-multiplexing for power efficient system with MPSL
+							and interrupt handling.</li>
+						<li>Devised advanced mesh packet monitoring and encrypting tools for both over-the-air captured
+							segmented and unsegmented packets with Wireshark support.</li>
+						<li>Engineered comprehensive firmware solutions for host systems and customized software
+							development over Zephyr RTOS for a proprietary hardware platform, improving system
+							compatibility as a part of a team of 8 while collaborating with test engineers.</li>
+						<li>Collaborated on BT mesh networking system with a vendor-specific model for transfer of
+							custom sensory information to a centralized controller.</li>
+					</ul>
+					</p>
+					<br>
+					<span>August 2021 - July 2023</span>
+					<h3><a href="https://miamioh.edu/" target="_blank"
+							style="text-decoration: none; color: inherit;">Miami University</a>, Oxford, OH</h3>
+					<p>Research Assistant</p>
+					<p>
+					<ul>
+						<li>Managed collaborative research project on corrosion of various metals (with the University
+							of Texas) with a focus on EBSD and SECCM data integration, cleansing, and deep learning
+							model development with a 0.98 coefficient of using novel image registration and processing
+							techniques on 7 experiments.</li>
+						<li>Researched trajectory and network connectivity optimization for UAV-based wireless
+							communication networks operating on deep reinforcement learning algorithms.</li>
+						<li>Developed a novel distributed algorithm based on multi-agent deep q-learning and game theory
+							for control of distributed multi-UAV information sharing for a decentralized partially
+							observable system.</li>
+					</ul>
+					</p>
+				</div>
+			</div>
+		</section>
 
-	</body>
+		<section id="skills">
+			<h1> <i class="fa-solid fa-book"></i>&nbsp;Skills</h1>
+			<div class="text-box">
+				<p>
+				<ul>
+					<li style="margin-bottom: 10px;"><strong>Programming:</strong> Python, Embedded C, MATLAB, C,
+						C++ and HTML.</li>
+					<li style="margin-bottom: 10px;"><strong>Packages: </strong>Pytorch, Tensorflow, Pandas, Numpy,
+						Stable Baseline, Zephyr RTOS,
+						Nrfxlib.</li>
+					<li style="margin-bottom: 10px;"><strong>Research and Publication </strong>: <ul>
+							<li><em> <a href="https://ieeexplore.ieee.org/document/10279806" target="_blank"
+										style="text-decoration: none; color: inherit;">Charging Profile Design for
+										Solar-Powered Sustainable UAV Communication
+										Networks</a></em> (IEEE ICC)</li>
+							<li><em> <a href="https://edas.info/showManuscript.php?m=1570910300&ext=pdf&random=272165003&type=stamped"
+										target="_blank" style="text-decoration: none; color: inherit;">Distributed
+										Design on User Connectivity Maximization in UAV Based Communication
+										Network
+								</em>(IEEE GlobeCom accepted, pending IEEE explore publication).</li>
+						</ul>
+					</li>
+					<li style="margin-bottom: 10px;"><strong>Presentation:</strong> Oral IEEE GlobeCom 2023
+						conference presentation (accepted), Oral
+						presentation paper for the STLE 2022 conference, and several on-the-job professional
+						presentations on projects and research.</li>
+				</ul>
+				</p>
+			</div>
+		</section>
+
+		<section id="education">
+			<h1> <i class="fas fa-graduation-cap"></i>&nbsp;Education</h1>
+			<div class="text-box">
+				<div class="timeline">
+					<span>August 2023</span>
+					<h3><a href="https://miamioh.edu/" target="_blank"
+							style="text-decoration: none; color: inherit;">Miami University, Oxford, OH</a></h3>
+					<p>Master of Science <br>
+						<em>Electrical and Computer Engineering (Reinforcement Learning) </em> | 4.0
+					</p>
+					<p>
+					<ul>
+						<li>Conducted multiple independent research on early detection of breast cancer classification
+							with image processing and CNN classification.</li>
+						<li>Executed course project on heart disease classification leveraging biomedical signal
+							processing and deep learning with 82% accuracy.</li>
+					</ul>
+					</p>
+					<br>
+					<span> September 2019 </span>
+					<h3><a href="https://tcioe.edu.np/" target="_blank"
+							style="text-decoration: none; color: inherit;">Thapathali Campus, I.O.E, </a> Tribhuvan
+						University, Kathmandu, Nepal</h3>
+					<p>Bachelor of Engineering <br>
+						<em>Electronics and Communication </em> | 3.80 (Scholaro Conversion)
+					</p>
+					<p>
+					<ul>
+						<li>Initiated a project on semi-autonomous two-vehicle navigation system-based guidance with a
+							dynamic feedback control loop.</li>
+						<li>Relevant elective courses: artificial intelligence, big data technologies, and data mining.
+						</li>
+					</ul>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="certifications">
+			<h1> <i class="fas fa-certificate"></i>&nbsp;Certification</h1>
+			<div class="text-box">
+			<ul>
+				<li><a href="https://coursera.org/share/c80261d116a4239abf2118d1608210ae"
+					target="_blank" style="text-decoration: none; color: inherit;">Python (Certificate): Getting Started with Python, Python Data Structure, Using Python to Access Web
+					Data, Using Database with Python</a></li>
+				<li><a href="https://coursera.org/share/885da5584547adade024e412f6b53fe4"
+					target="_blank" style="text-decoration: none; color: inherit;">Machine Learning (Certificate): Machine Learning</a></li>
+			</ul>
+
+		</section>
+
+		<section id="awardandrecognization">
+			<h1> <i class="fas fa-trophy"></i>&nbsp;Awards and Recognization</h1>
+			<div class="text-box">
+			<ul>
+				<p>
+					<ul>
+						<li>Award: Thapathali campus semester topper 2nd year 2nd part and 4th year 1st part.</li>
+						<li>Gold award at STLE 2022 conference for poster presentation among 40 researchers. <a href="https://miamioh.edu/cec/news-events/2022/06/miami-university-graduate-student-saugat-tripathi-wins-gold-award-in-stle-exhibition.html"
+							target="_blank" style="text-decoration: none; color: inherit;">(also covered in Miami University news)</a></li>
+					</ul>
+				</p>
+			</ul>
+
+		</section>
+		
+		</div>
+
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "25%";
+				document.getElementById("main").style.marginLeft = "25%";
+				document.getElementById("main").querySelector("span").style.display = "none"; // Hide the button
+			}
+
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("main").style.marginLeft = "0";
+				document.getElementById("main").querySelector("span").style.display = "block"; // Show the button again
+			}
+
+			function toggleTheme() {
+				document.body.classList.toggle("dark-mode");
+				document.getElementById("main").classList.toggle("dark-mode");
+			}
+		</script>
+</body>
+
 </html>

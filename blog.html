@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: black;
+        }
+
+        h1 {
+            color: white
+        }
+
+        p {
+            color: white
+        }
+
+        body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f6f6f6;
+			transition: margin-left .3s;
+			/* Add transition for smooth slide animation */
+			margin-left: 50px;
+			/* Add margin-left property */
+			text-align: justify;
+		}
+
+		header {
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.sidenav {
+			background-color: rgb(215, 215, 215);
+			/* Increase transparency by adding alpha value */
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			overflow-x: hidden;
+			transition: width .3s;
+			/* Add transition for smooth slide animation */
+			padding-top: 60px;
+			font-family: Arial, sanss-serif;
+			/* Add font-family property */
+		}
+
+		.sidenav a {
+			padding: 8px 8px 24px 32px;
+			text-decoration: none;
+			font-size: 20px;
+			color: #000000;
+			display: block;
+			transition: color .3s;
+		}
+
+		.sidenav a:hover {
+			color: #f1f1f1;
+		}
+
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		.dark-mode {
+			background-color: black;
+			color: white;
+
+			.sidenav a {
+				color: white;
+				background-color: #1c1b1b;
+				/* Add this rule to change the text color of the links inside the navbar when dark mode is active */
+			}
+
+			.sidenav {
+				background-color: #1c1b1b;
+				/* Add this rule to change the background color of the side navigation when dark mode is active */
+			}
+
+			.sidenav a:hover {
+				background-color: #1c1b1b;
+				color: #626060;
+			}
+
+			.text-box {
+				background-color: #1c1b1b;
+				color: white;
+			}
+
+			.timeline:before {
+				background-color: white;
+			}
+
+			.timeline h3:before {
+				background-color: white;
+			}
+		}
+
+		#main {
+			transition: margin-left .3s, width .3s;
+			/* Add transition for smooth slide animation */
+			padding: 20px;
+			margin-left: 0;
+			/* Add margin-left property */
+		}
+
+		section {
+			padding: 20px;
+		}
+
+		form input[type="text"],
+		form input[type="email"] {
+			margin: 10px 0;
+			padding: 10px;
+			width: 100%;
+		}
+
+		form input[type="submit"] {
+			padding: 10px 20px;
+			background-color: #333;
+			color: white;
+			border: none;
+		}
+
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 60px;
+			height: 34px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 1px;
+			right: 1px;
+			bottom: 2px;
+			background-color: #1a1a1a;
+			transition: .4s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 24px;
+			width: 24px;
+			left: 4px;
+			bottom: 4px;
+			background-color: rgb(183, 183, 183);
+			transition: .4s;
+		}
+
+		input:checked+.slider {
+			background-color: #a1a1a1;
+		}
+
+		input:checked+.slider:before {
+			transform: translateX(26px);
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
+		}
+
+		.slider i {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.slider .fa-moon {
+			left: 7px;
+		}
+
+		.slider .fa-sun {
+			right: 7px;
+		}
+
+		.text-box {
+			background-color: rgb(215, 215, 215);
+			color: black;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 0 auto;
+			/* Added to center the text box */
+			max-width: 800px;
+			/* Added to limit the width of the text box */
+		}
+
+		.text-box section {
+			margin-bottom: 20px;
+		}
+
+		.text-box i {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+
+		.text-box h3 {
+			font-size: 16px;
+			margin: 0;
+			padding-left: 10px;
+		}
+
+		.text-box p {
+			margin: 0;
+			font-size: 16px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			text-align: justify;
+
+		}
+
+		.text-box ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 16px;
+		}
+
+		.text-box li {
+			margin-bottom: 10px;
+			font-size: 16px;
+			padding-left: 10px;
+			list-style-type: '- ';
+		}
+
+		.text-box span {
+			font-size: 12px;
+			padding-left: 10px;
+		}
+
+		.timeline {
+			position: relative;
+			margin-left: 60px;
+			margin-bottom: 20px;
+		}
+
+		.timeline:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -15px;
+			width: 3px;
+			height: 100%;
+			background-color: #333;
+		}
+
+		.timeline h3 {
+			position: relative;
+			font-size: 16px;
+		}
+
+		.timeline h3:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -10px;
+			transform: translateY(-50%);
+			width: 0;
+			height: 0;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 5px solid #333;
+			/* Use a border to create an arrow */
+		}
+
+
+
+		/* Media Queries */
+		@media screen and (max-width: 600px) {
+			.sidenav {
+				width: 100%;
+			}
+
+			#main {
+				margin-left: 0;
+			}
+		}
+    </style>
+</head>
+
+<body>
+        <header>
+            <div class="container" style="display: flex; justify-content: flex-end;">
+                <label class="switch">
+                    <input type="checkbox" id="mode" class="toggle" onclick="toggleTheme()">
+                    <span class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </span>
+                </label>
+                <p id="theme"></p>
+            </div>
+        </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#education" onclick="scrollToSection('education')"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="#experience" onclick="scrollToSection('experience')"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="#projects" onclick="scrollToSection('projects')"><i class="fas fa-code"></i> Projects</a>
+            <a href="#skills" onclick="scrollToSection('skills')"><i class="fa-solid fa-book"></i> Skills</a>
+            <a href="#certifications" onclick="scrollToSection('certifications')"><i class="fas fa-certificate"></i>Certifications</a>
+            <a href="#awardandrecognization" onclick="scrollToSection('awardandrecognization')"><i
+                    class="fas fa-trophy"></i> Award and Recognization</a>
+            <a href="blog.html" onclick="scrollToSection('blog')"><i class="fas fa-blog"></i> Blog</a>
+                
+                <hr> 
+        <div class="social-links flex-container">
+            <a href="https://github.com/saugat76"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/saugat-tripathi/"><i class="fab fa-linkedin"></i></a> 
+            <a href="resume.pdf"><i class="fas fa-file"></i></a> 
+        </div>
+                
+        </div>
+
+        <script>
+            window.addEventListener('load', function () {
+                openNav();
+                toggleTheme();
+            });
+        </script>
+        <section id="main">
+            <span onclick="openNav()">&#9776; </span>
+            <div>
+            <h1>Blog</h1>
+            <p>I don't have any blogs right now, but they are coming soon!</p>
+            Stay tuned for updates!</div>
+        </section>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "25%";
+                    document.getElementById("main").style.marginLeft = "25%";
+                    document.getElementById("main").querySelector("span").style.display = "none"; // Hide the button
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft = "0";
+                    document.getElementById("main").querySelector("span").style.display = "block"; // Show the button again
+                }
+
+                function toggleTheme() {
+                    document.body.classList.toggle("dark-mode");
+                    document.getElementById("main").classList.toggle("dark-mode");
+                }
+            </script>
+    </body>
+
+</html>
+</body>
+
+</html>
